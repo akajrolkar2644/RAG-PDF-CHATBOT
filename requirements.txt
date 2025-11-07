@@ -1,0 +1,9 @@
+fastapi
+uvicorn[standard]
+pydantic
+python-multipart
+requests
+sentence-transformers
+faiss-cpu
+PyPDF2
+python-dotenv

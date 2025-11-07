@@ -1,0 +1,31 @@
+[tool.pyright]
+# Python version and basic settings
+pythonVersion = "3.10"
+pythonPlatform = "Windows"
+include = ["backend"]
+exclude = ["venv", "frontend", "**/__pycache__", "**/node_modules"]
+
+# Type checking rules - moderate strictness while allowing for dynamic libraries
+typeCheckingMode = "basic"
+reportMissingImports = "none"
+reportMissingTypeStubs = "none"
+reportUnknownMemberType = "none"
+reportUnknownArgumentType = "none"
+reportCallIssue = "none"
+reportOptionalMemberAccess = "error"
+reportAttributeAccessIssue = "none"
+
+# Allow some flexibility for external libraries
+strictListInference = true
+strictDictionaryInference = true
+strictParameterNoneValue = true
+
+# Path settings
+stubPath = ""
+venvPath = "."
+venv = ".venv"
+
+# Execution environment
+executionEnvironments = [
+  { root = "backend", pythonVersion = "3.10", pythonPlatform = "Windows" }
+]
